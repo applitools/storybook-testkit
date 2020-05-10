@@ -7,8 +7,6 @@
 1. Output log to file:
     * set `showLogs: true` in `applitools.config.js`
     * run `npm run test:visual > eyes.log`
-    * recommended to output log file name with story count / features, e.g. `eyes_1000_9tabs.log`
-
-1. It's possible to `npm link @applitools/eyes-storybook` for development
+    * recommended to output log file name with story count / features, e.g. `eyes_1000_9browsers_100concurrency.log`
 
 1. To just run the storybook (for inspection): `npm run storybook`
