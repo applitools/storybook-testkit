@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@applitools/eyes-storybook": "^3.5.3",
+    "@applitools/eyes-storybook": "^3.10.1",
     "why-is-node-running": "^2.1.2"
   },
   "devDependencies": {
