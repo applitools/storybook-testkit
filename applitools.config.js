@@ -1,6 +1,7 @@
+const isDocker = require("is-docker");
 module.exports = {
   concurrency: 100,
-  // showLogs: true,
+  showLogs: !!process.env.APPLITOOLS_SHOW_LOGS,
   appName: "Storybook testkit",
   batchName: "Storybook testkit",
   browser: [
@@ -14,8 +15,12 @@ module.exports = {
     // {width: 1200, height: 800, name: 'ie11'},
     // { deviceName: "iPhone X" }
   ],
+  runInDocker: isDocker(),
   puppeteerOptions: {
     // headless: false,
-    // devtools: true
+    // devtools: true,
+    args: isDocker()
+      ? ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
+      : []
   }
 };
